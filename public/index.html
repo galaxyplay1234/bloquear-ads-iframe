@@ -2,18 +2,33 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Iframe Proxy bloqueando Ads</title>
+  <title>Bloquear Anúncios em Iframe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
-    body, html {
-      margin: 0; padding: 0; height: 100vh; display: flex; justify-content: center; align-items: center; background-color: #121212;
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #111;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
     }
+
     iframe {
-      width: 90vw; height: 90vh; border: none; box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+      width: 90vw;
+      height: 90vh;
+      border: none;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+      background-color: #000;
     }
   </style>
 </head>
 <body>
-  <iframe src="/api/proxy?url=https://streamtp4.com/global1.php?stream=espn1br"></iframe>
+  <iframe
+    src="https://streamtp4.com/global1.php?stream=espn1br"
+    sandbox="allow-same-origin allow-scripts"
+    allow="fullscreen"
+  ></iframe>
 </body>
 </html>
