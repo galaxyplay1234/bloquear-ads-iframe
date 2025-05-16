@@ -1,8 +1,10 @@
 {
   "name": "puppeteer-vercel-proxy",
   "version": "1.0.0",
-  "main": "index.js",
   "type": "module",
+  "engines": {
+    "node": "18.x"
+  },
   "dependencies": {
     "chrome-aws-lambda": "^10.1.0",
     "puppeteer-core": "^21.3.8"
